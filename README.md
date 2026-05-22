@@ -3,7 +3,28 @@
 
 ## 接入
 
-**build.gradle.kts**
+**settings.gradle.kts** — 添加 JitPack 仓库：
+
+```kotlin
+pluginManagement {
+    repositories {
+        maven { url = uri("https://jitpack.io") }
+        gradlePluginPortal()
+        google()
+        mavenCentral()
+    }
+}
+dependencyResolutionManagement {
+    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+    repositories {
+        maven { url = uri("https://jitpack.io") }
+        google()
+        mavenCentral()
+    }
+}
+```
+
+**build.gradle.kts** — 应用插件并配置：
 
 ```kotlin
 plugins {
