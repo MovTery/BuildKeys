@@ -3,7 +3,7 @@
 
 ## 接入
 
-**settings.gradle.kts** — 添加 JitPack 仓库：
+**settings.gradle.kts**
 
 ```kotlin
 pluginManagement {
@@ -24,7 +24,7 @@ dependencyResolutionManagement {
 }
 ```
 
-**build.gradle.kts** — 应用插件并配置：
+**module/build.gradle.kts** 应用插件配置：
 
 ```kotlin
 plugins {
