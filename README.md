@@ -3,23 +3,17 @@
 
 ## 接入
 
-**settings.gradle.kts**
+**根 build.gradle.kts**
 
 ```kotlin
-pluginManagement {
+buildscript {
     repositories {
         maven { url = uri("https://jitpack.io") }
-        gradlePluginPortal()
         google()
         mavenCentral()
     }
-}
-dependencyResolutionManagement {
-    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
-    repositories {
-        maven { url = uri("https://jitpack.io") }
-        google()
-        mavenCentral()
+    dependencies {
+        classpath("com.github.MovTery.BuildKeys:core:1.0.0")
     }
 }
 ```
@@ -28,7 +22,7 @@ dependencyResolutionManagement {
 
 ```kotlin
 plugins {
-    id("com.movtery.buildkeys") version "1.0.0"
+    id("com.movtery.buildkeys")
 }
 
 buildKeys {
