@@ -1,5 +1,6 @@
 # BuildKeys
-一个编译期动态生成 Kotlin 配置类的 Gradle 插件，支持字符串自动“模糊化”处理，类似 BuildConfig，但更灵活
+一个编译期动态生成 Kotlin 配置类的 Gradle 插件，支持字符串自动“模糊化”处理  
+类似 BuildConfig，但更方便使用
 
 ## 接入
 
@@ -25,6 +26,7 @@ plugins {
     id("com.movtery.buildkeys")
 }
 
+//配置该插件
 buildKeys {
     string("API_KEY", "xxxxx")
     string("SECRET", "xxxxx", hidden = true) //启用字符串模糊化处理
